@@ -10,6 +10,7 @@ mod modified_binary_search;
 mod subsets;
 mod greedy_techniques;
 mod backtracking;
+mod dynamic_programming;
 
 fn main() {
     println!("Hello, world!");
@@ -72,5 +73,9 @@ fn main() {
     // Solving the "N-Queens" Challenge
     let solutions = backtracking::n_queens::solve_n_queens(4);
     println!("n_queens: {:?}", solutions);
+
+    // Solving the "0/1 Knapsack" Challenge
+    let knapsack = dynamic_programming::knapsack::knapsack(vec![60, 100, 120], vec![10, 20, 30], 50);
+    println!("knapsack: {:?}", knapsack);
     
 }
