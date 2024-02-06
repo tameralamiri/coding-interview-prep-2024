@@ -8,6 +8,7 @@ mod k_way_merge;
 mod top_k_elements;
 mod modified_binary_search;
 mod subsets;
+mod greedy_techniques;
 
 fn main() {
     println!("Hello, world!");
@@ -62,6 +63,10 @@ fn main() {
     // Solving the "Subsets" Challenge
     let subsets = subsets::subsets::subsets(vec![1, 2, 3]);
     println!("subsets: {:?}", subsets);
+
+    // Solving the "Jump Game I" Challenge
+    let can_jump = greedy_techniques::jump_game_l::can_jump(vec![2, 3, 1, 1, 4]);
+    println!("can_jump: {:?}", can_jump);
 
 
     
