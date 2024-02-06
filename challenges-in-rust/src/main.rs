@@ -1,4 +1,3 @@
-mod top_kth_element;
 mod sliding_window;
 mod two_pointers;
 mod fast_and_slow_pointers;
@@ -8,20 +7,15 @@ mod two_heaps;
 mod k_way_merge;
 mod top_k_elements;
 mod modified_binary_search;
+mod subsets;
 
 fn main() {
     println!("Hello, world!");
     let numbers: [i32; 5] = [1, 2, 3, 4, 5];
-    let largest: Option<i32> = top_kth_element::largest_number::find_largest(&numbers);
     let max_sum_contiguous_subarray: Option<i32> = sliding_window::max_sum_contiguous_subarray::max_sum_contiguous_subarray(&numbers, 3);
     let max_sum: Option<i32> = sliding_window::max_sum::max_sum(&numbers);
-    println!("largest: {:?}", largest);
     println!("max_sum_contiguous_subarray: {:?}", max_sum_contiguous_subarray);
     println!("max_sum: {:?}", max_sum);
-
-    // Summing the values:
-    let total = largest.unwrap_or(0) + max_sum_contiguous_subarray.unwrap_or(0) + max_sum.unwrap_or(0);
-    println!("total: {:?}", total);
 
     // Checking for Palindrome
     // A palindrome is a string that reads the same forward and backward.
@@ -64,6 +58,10 @@ fn main() {
     // Solving the "Binary Search" Challenge
     let binary_search = modified_binary_search::binary_search::binary_search(vec![-1, 0, 3, 5, 9, 12], 9);
     println!("binary_search: {:?}", binary_search);
+
+    // Solving the "Subsets" Challenge
+    let subsets = subsets::subsets::subsets(vec![1, 2, 3]);
+    println!("subsets: {:?}", subsets);
 
 
     
