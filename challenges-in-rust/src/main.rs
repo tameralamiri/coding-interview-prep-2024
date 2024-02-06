@@ -11,6 +11,7 @@ mod subsets;
 mod greedy_techniques;
 mod backtracking;
 mod dynamic_programming;
+mod cyclic_sort;
 
 fn main() {
     println!("Hello, world!");
@@ -77,5 +78,12 @@ fn main() {
     // Solving the "0/1 Knapsack" Challenge
     let knapsack = dynamic_programming::knapsack::knapsack(vec![60, 100, 120], vec![10, 20, 30], 50);
     println!("knapsack: {:?}", knapsack);
+
+    // Solving the "Missing Number" Challenge
+    let missing_number_1 = cyclic_sort::missing_number::missing_number(vec![3, 0, 1]);
+    let missing_number_2 = cyclic_sort::missing_number::missing_number_2(vec![3, 0, 1]);
+    println!("missing_number: {:?}", missing_number_1);
+    println!("missing_number_2: {:?}", missing_number_2);
+
     
 }
