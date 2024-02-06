@@ -9,6 +9,7 @@ mod top_k_elements;
 mod modified_binary_search;
 mod subsets;
 mod greedy_techniques;
+mod backtracking;
 
 fn main() {
     println!("Hello, world!");
@@ -68,6 +69,8 @@ fn main() {
     let can_jump = greedy_techniques::jump_game_l::can_jump(vec![2, 3, 1, 1, 4]);
     println!("can_jump: {:?}", can_jump);
 
-
+    // Solving the "N-Queens" Challenge
+    let solutions = backtracking::n_queens::solve_n_queens(4);
+    println!("n_queens: {:?}", solutions);
     
 }
