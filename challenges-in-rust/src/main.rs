@@ -12,6 +12,7 @@ mod greedy_techniques;
 mod backtracking;
 mod dynamic_programming;
 mod cyclic_sort;
+mod topological_sort;
 
 fn main() {
     println!("Hello, world!");
@@ -84,6 +85,13 @@ fn main() {
     let missing_number_2 = cyclic_sort::missing_number::missing_number_2(vec![3, 0, 1]);
     println!("missing_number: {:?}", missing_number_1);
     println!("missing_number_2: {:?}", missing_number_2);
+
+    // Solving the "Compilation Order" Challenge
+    let files = vec![ 'a', 'b', 'c', 'd', 'e', 'f'];
+    let dependencies = vec![ ('a', 'd'), ('f', 'b'), ('b', 'd'), ('f', 'a'), ('d', 'c')];
+    let compilation_order = topological_sort::compilation_order::compile_order(files, dependencies);
+    println!("compilation_order: {:?}", compilation_order);
+
 
     
 }
