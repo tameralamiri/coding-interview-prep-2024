@@ -13,6 +13,7 @@ mod backtracking;
 mod dynamic_programming;
 mod cyclic_sort;
 mod topological_sort;
+mod matrices;
 
 fn main() {
     println!("Hello, world!");
@@ -91,6 +92,11 @@ fn main() {
     let dependencies = vec![ ('a', 'd'), ('f', 'b'), ('b', 'd'), ('f', 'a'), ('d', 'c')];
     let compilation_order = topological_sort::compilation_order::compile_order(files, dependencies);
     println!("compilation_order: {:?}", compilation_order);
+
+    // Solving the "Set Matrix Zeroes" Challenge
+    let mut matrix = vec![vec![0,1,2,0], vec![3,4,5,2], vec![1,3,1,5]];
+    matrices::set_matrix_zeroes::set_zeroes(&mut matrix);
+    println!("set_matrix_zeroes: {:?}", matrix);
 
 
     
