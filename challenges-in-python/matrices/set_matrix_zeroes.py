@@ -38,14 +38,15 @@ def set_zeros(matrix):
 
 
 # Test cases
-# Test 1
-matrix = [[1, 1, 1], [1, 0, 1], [1, 1, 1]]
-# After calling the function
-# [[1, 0, 1], [0, 0, 0], [1, 0, 1]]
-print(set_zeros(matrix))
+def test_set_zeros():
+    # Test 1
+    matrix = [[1, 1, 1], [1, 0, 1], [1, 1, 1]]
+    # After calling the function
+    # [[1, 0, 1], [0, 0, 0], [1, 0, 1]]
+    assert set_zeros(matrix) == [[1, 0, 1], [0, 0, 0], [1, 0, 1]]
 
-# Test 2
-matrix = [[0, 1, 2, 0], [3, 4, 5, 2], [1, 3, 1, 5]]
-# After calling the function
-# [[0, 0, 0, 0], [0, 4, 5, 0], [0, 3, 1, 0]]
-print(set_zeros(matrix))
+    # Test 2
+    matrix = [[0, 1, 2, 0], [3, 4, 5, 2], [1, 3, 1, 5]]
+    # After calling the function
+    # [[0, 0, 0, 0], [0, 4, 5, 0], [0, 3, 1, 0]]
+    assert set_zeros(matrix) == [[0, 0, 0, 0], [0, 4, 5, 0], [0, 3, 1, 0]]
