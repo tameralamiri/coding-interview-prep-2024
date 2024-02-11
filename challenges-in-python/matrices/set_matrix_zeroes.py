@@ -50,3 +50,6 @@ def test_set_zeros():
     # After calling the function
     # [[0, 0, 0, 0], [0, 4, 5, 0], [0, 3, 1, 0]]
     assert set_zeros(matrix) == [[0, 0, 0, 0], [0, 4, 5, 0], [0, 3, 1, 0]]
+
+
+test_set_zeros()
