@@ -11,7 +11,10 @@ my_list_mixed = [1, "Hello", 3.4, True]
 print(my_list[0]) # 1, Access elements using index, Index starts from 0.
 print(my_list[-1]) # 5, # Accessing elements using negative index, Negative index starts from -1.
 
-# 2. Slicing:
+# 2. Length of List:
+print(len(my_list)) # 5, Length of list.
+
+# 3. Slicing:
 # Slicing is used to access a range of elements.
 # Syntax: list[start:stop:step]
 # start: starting index of the slice.
@@ -20,7 +23,7 @@ print(my_list[-1]) # 5, # Accessing elements using negative index, Negative inde
 print(my_list[1:3]) # [2, 3]
 print(my_list[1:]) # [2, 3, 4, 5]
 
-# 3. Modifying Elements:
+# 4. Modifying Elements:
 my_list[0] = 10 # [10, 2, 3, 4, 5],  Modifying elements using index.
 my_list[1:3] = [20, 30] # [10, 20, 30, 4, 5], Modifying elements using slicing.
 my_list.append(6) # [10, 20, 30, 4, 5, 6], Adding elements using append() method, It takes an element as an argument, and adds it to the end of the list.
@@ -31,34 +34,34 @@ my_list.pop(1) # [10, 30, 4, 5, 6, 7, 8, 9], Removing elements using pop(index) 
 del my_list[1] # [10, 4, 5, 6, 7, 8, 9], Removing elements using del statement, It takes an index as an argument.
 my_list.clear() # [], Removing all elements using clear() method.
 
-# 4. Concatenating Lists:
+# 5. Concatenating Lists:
 list_one = [1, 2, 3]
 list_two = [4, 5, 6]
 concatenated_list = list_one + list_two # [1, 2, 3, 4, 5, 6], Using + operator.
 list_one.extend(list_two) # [1, 2, 3, 4, 5, 6], Using extend() method.
 
-# 5. Repeating Lists:
+# 6. Repeating Lists:
 repeated_list = list_one * 2 # [1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6], Using * operator.
 empty_list = [] * 3 # [], Using * operator with an empty list.
 
-# 6. List Comprehension:
+# 7. List Comprehension:
 # List comprehension is a concise way to create lists.
 # Syntax: [expression for item in iterable]
 squared_numbers = [i**2 for i in range(1, 6)] # [1, 4, 9, 16, 25]
 even_numbers = [i for i in range(1, 11) if i % 2 == 0] # [2, 4, 6, 8, 10]
 
 
-# 7. sort() and sorted():
+# 8. sort() and sorted():
 numbers = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5]
 sorted_numbers = sorted(numbers) # [1, 1, 2, 3, 3, 4, 5, 5, 5, 6, 9], Using sorted() function, It returns a new sorted list.
 numbers.sort() # [1, 1, 2, 3, 3, 4, 5, 5, 5, 6, 9], Using sort() method, It sorts the list in place.
 
-# 8. Reversing a List:
+# 9. Reversing a List:
 reversed_numbers = list(reversed(numbers)) # [9, 6, 5, 5, 5, 4, 3, 3, 2, 1, 1], Using reversed() function, It returns a new reversed list.
 numbers.reverse() # [9, 6, 5, 5, 5, 4, 3, 3, 2, 1, 1], Using reverse() method, It reverses the list in place.
 reversed_numbers = numbers[::-1] # [9, 6, 5, 5, 5, 4, 3, 3, 2, 1, 1], Using slicing, It returns a new reversed list.
 
-# 9. Searching for an Element:
+# 10. Searching for an Element:
 # Using in and not in operators:
 print(3 in numbers) # True
 print(10 not in numbers) # True
@@ -66,7 +69,7 @@ print(10 not in numbers) # True
 print(numbers.index(5)) # 2, It returns the index of the first occurrence of the element. If the element is not found, it raises a ValueError.
 print(numbers.count(5)) # 3, It returns the number of occurrences of the element. If the element is not found, it returns 0.
 
-# 10. Copying a List:
+# 11. Copying a List:
 numbers_copy = numbers.copy() # [9, 6, 5, 5, 5, 4, 3, 3, 2, 1, 1], Using copy() method. shallow copy, same inner list.
 numbers_copy = list(numbers) # [9, 6, 5, 5, 5, 4, 3, 3, 2, 1, 1], Using list() function. 
 numbers_copy = numbers[:] # [9, 6, 5, 5, 5, 4, 3, 3, 2, 1, 1], Using slicing:
