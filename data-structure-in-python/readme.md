@@ -10,3 +10,4 @@
 * LinkedList
 * Trees
 * Graphs
+* Matrices

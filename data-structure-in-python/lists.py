@@ -1,5 +1,12 @@
-# Arrays, Lists:
-# Arrays in python are represented by the list data type. which is slow
+# Lists:
+# Lists are mutable, ordered, and indexed collection of items. It is a data structure in python.
+# They are used to represent different data types:
+# 1. Arrays: lists are used to represent arrays despite being slow
+# 2. Stacks: lists are used to represent stacks
+# 3. Queues: lists are used to represent queues
+
+
+# represented by the list data type. which is slow
 # There's Array module in python which is faster than list but it's not commonly used. and supports only numeric values.
 # List is a collection of items. It is a mutable data type. It can store elements of different data types.
 my_list = [1, 2, 3, 4, 5]
