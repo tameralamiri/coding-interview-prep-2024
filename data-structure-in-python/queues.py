@@ -109,5 +109,11 @@ print(queue.dequeue()) # 1, Dequeue
 print(queue.dequeue()) # 2, Dequeue
 print(queue.dequeue()) # 3, Dequeue
 
-
+# 5. Using queue.Queue: Suitable for multi-threaded programming.
+from queue import Queue
+queue = Queue() # you can also specify the max size of the queue as an argument Queue(maxsize=10)
+queue.put("item") # Enqueue
+queue.get() # Dequeue
+queue.empty() # isEmpty
+queue.queue[0] # Front
 
