@@ -64,3 +64,46 @@ print(stack.pop()) # 2, Pop
 print(stack.pop()) # 1, Pop
 print(stack.isEmpty()) # True
 print(stack.peek()) # Stack is Empty
+
+# Using Linked List:
+# The linked list implementation of a stack is efficient and less error-prone.
+# It is used to implement the undo mechanism in text editors.
+# It is used to implement backtracking in algorithms.
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+class Stack:
+    def __init__(self):
+        self.head = None
+    def push(self, data):
+        if not self.head:
+            self.head = Node(data)
+        else:
+            new_node = Node(data)
+            new_node.next = self.head
+            self.head = new_node
+    def pop(self):
+        if not self.head:
+            return "Stack is Empty"
+        else:
+            popped = self.head.data
+            self.head = self.head.next
+            return popped
+    def peek(self):
+        if not self.head:
+            return "Stack is Empty"
+        else:
+            return self.head.data
+    def isEmpty(self):
+        return not bool(self.head)
+
+stack = Stack()
+stack.push(1) # Push
+stack.push(2) # Push
+stack.push(3) # Push
+print(stack.peek()) # 3, Peek
+print(stack.isEmpty()) # False
+print(stack.pop()) # 3, Pop
+print(stack.pop()) # 2, Pop
+print(stack.pop()) # 1, Pop
