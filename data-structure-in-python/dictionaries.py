@@ -1,6 +1,7 @@
 # Dictionaries:
 # 1. A dictionary is a built-in data type that store collections of key-value pair. unordered, mutable and indexed. 
 # 2. Keys must be unique and immutable. such as strings, numbers, or tuples.
+# 3. Dictionaries are the representations of hash tables
 
 
 # Creating a dictionary:
@@ -56,9 +57,5 @@ if "name" in person:
 # Check the length of a dictionary:
 print(len(person))
 
-
-
-
-# Adding elements:
-# 1. Using square brackets [].
-
+# Renaming a key:
+person["first_name"] = person.pop("name") # pop() method returns the value of the key that is removed.
