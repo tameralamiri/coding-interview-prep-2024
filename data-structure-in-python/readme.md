@@ -4,10 +4,12 @@
 * Arrays
 * Nested Arrays
 * Maps/Dictionaries
-* Sets
+* Sets, Tuples 
 * Stacks
 * Queues
-* LinkedList
+* LinkedList, Double Linked Lists
 * Trees
 * Graphs
-* Matrices
+* Heaps 
+* OOP 
+* Bitwise Manipulation
