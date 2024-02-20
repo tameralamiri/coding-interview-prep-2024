@@ -140,7 +140,3 @@ def traverse_list(my_list):
     print(my_list[0])
     traverse_list(my_list[1:])
 traverse_list([1, 2, 3, 4, 5])
-
-
-
-
